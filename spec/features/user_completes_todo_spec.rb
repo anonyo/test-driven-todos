@@ -4,9 +4,7 @@ feature 'User completes a todo' do
   scenario 'successfully' do
     sign_in
 
-    click_on 'Add New Todo'
-    fill_in 'Title', with: 'Need to pick up lunch.'
-    click_on 'Submit'
+    create_todo 'Need to pick up lunch.'
 
     click_on 'Mark completed'
 
