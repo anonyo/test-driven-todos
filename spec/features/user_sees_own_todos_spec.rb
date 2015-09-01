@@ -6,6 +6,6 @@ feature 'User sees own todos' do
 
     sign_in_as 'someone@gmail.com'
 
-    expect(page).not_to have_css '.todos li', text: 'code more'
+    expect(page).not_to display_todo 'code more'
   end
 end
