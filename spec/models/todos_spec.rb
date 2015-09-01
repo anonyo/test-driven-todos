@@ -13,4 +13,12 @@ describe Todo do
       expect(todo.completed?).to be false
     end
   end
+
+  describe '#complete!' do
+    it 'updates completed_at with current time' do
+      todo = Todo.create(completed_at: nil)
+      todo.complete!
+      expect(todo).to be_completed
+    end
+  end
 end
