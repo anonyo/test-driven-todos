@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'todos#index'
   resources :todos do
-    resources :completion, only: :create
+    resource :completion, only: [:create, :destroy]
   end
   resource :session, only: [:new, :create]
 end
